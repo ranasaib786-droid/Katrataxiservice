@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katra Taxi Service | Katra, Jammu, Srinagar, Ladakh & Chardham Cab Rental</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.68), rgba(0,0,0,0.68)), url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=1400&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 3.1rem;
+            margin-bottom: 12px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 28px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #f1f5f9;
+        }
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn-wa, .btn-call {
+            display: inline-block;
+            color: white;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        .btn-wa {
+            background-color: #25D366;
+        }
+        .btn-wa:hover {
+            background-color: #1ebe5d;
+            transform: translateY(-2px);
+        }
+        .btn-call {
+            background-color: #007bff;
+        }
+        .btn-call:hover {
+            background-color: #0069d9;
+            transform: translateY(-2px);
+        }
+        .trust-bar {
+            background-color: #1e293b;
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-bottom: 3px solid #ffcc00;
+        }
+        .container {
+            max-width: 1150px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.1rem;
+            color: #1e293b;
+        }
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #64748b;
+            font-size: 1.05rem;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 25px;
+            margin-bottom: 55px;
+        }
+        .photo-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: transform 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+        .photo-card:hover {
+            transform: translateY(-5px);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-card-body {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .photo-card h3 {
+            margin-bottom: 10px;
+            color: #1e293b;
+            font-size: 1.3rem;
+        }
+        .photo-card p {
+            color: #475569;
+            font-size: 0.96rem;
+            margin-bottom: 15px;
+        }
+        .card-link {
+            display: inline-block;
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+        .card-link:hover {
+            text-decoration: underline;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+            margin-bottom: 55px;
+        }
+        .card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+            text-align: center;
+            border-top: 4px solid #ffcc00;
+        }
+        .card-icon {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+        .card h3 {
+            margin-bottom: 8px;
+            color: #1e293b;
+            font-size: 1.25rem;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+        }
+        .box h2 {
+            margin-bottom: 20px;
+            color: #1e293b;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        .routes-list ul {
+            list-style: none;
+        }
+        .routes-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1.02rem;
+            color: #334155;
+        }
+        .routes-list li:last-child {
+            border-bottom: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #334155;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn-submit:hover {
+            background-color: #1ebe5d;
+        }
+        .contact-info p {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        footer {
+            background-color: #1e293b;
+            color: #f8fafc;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin-bottom: 8px;
+        }
+        .floating-wa {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            background-color: #25D366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            font-size: 1rem;
+        }
+        .floating-wa:hover {
+            background-color: #1ebe5d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KATRA TAXI SERVICE</h1>
+        <p>Katra, Jammu, Kashmir, Leh-Ladakh, Himachal, Chardham & Amarnath Yatra के लिए 24x7 सुरक्षित टैक्सी, हेलीकॉप्टर व बाइक टूर सेवा</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/919469073437?text=Hello%20Katra%20Taxi%20Service,%20mujhe%20taxi%20/%20tour%20book%20karna%20hai." class="btn-wa" target="_blank">💬 WhatsApp पर बुक करें</a>
+            <a href="tel:+919469073437" class="btn-call">📞 कॉल करें: 9469073437</a>
+        </div>
+    </header>
+
+    <div class="trust-bar">
+        <span>✅ अनुभवी पहाड़ी ड्राइवर्स</span>
+        <span>✅ 24x7 एयरपोर्ट पिकअप व ड्रॉप</span>
+        <span>✅ साफ-सुथरी AC/Non-AC गाड़ियां</span>
+        <span>✅ बेस्ट प्राइस गारंटी</span>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">हमारी गाड़ियां (Our Fleet)</h2>
+        <p class="section-subtitle">आरामदायक और सुरक्षित सफर के लिए आधुनिक और साफ-सुथरी गाड़ियां</p>
+
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80" alt="Sedan Taxi Dzire Etios">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>Sedan (Dzire / Etios)</h3>
+                        <p>4 सीटर AC कैब — कपल्स, छोटे परिवारों और एयरपोर्ट पिकअप-ड्रॉप के लिए सबसे किफायती विकल्प।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Sedan%20Taxi%20book%20karni%20hai." class="card-link" target="_blank">WhatsApp पर रेट पूछें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80" alt="SUV Innova Crysta Scorpio">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>SUV (Innova Crysta / Scorpio)</h3>
+                        <p>6-7 सीटर लग्जरी SUV — लेह-लद्दाख, कश्मीर, हिमाचल और चारधाम के पहाड़ी रास्तों के लिए बेस्ट।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20SUV%20(Innova/Scorpio)%20book%20karni%20hai." class="card-link" target="_blank">WhatsApp पर रेट पूछें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Tempo Traveller Group Tour">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>Tempo Traveller (12 - 17 Seater)</h3>
+                        <p>बड़े परिवारों, ग्रुप टूर, अमरनाथ और चारधाम तीर्थयात्रियों के लिए पुश-बैक सीटों वाली आरामदायक गाड़ी।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Tempo%20Traveller%20book%20karna%20hai." class="card-link" target="_blank">WhatsApp पर रेट पूछें →</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">प्रमुख यात्रा एवं टूर पैकेज (Destinations & Yatra)</h2>
+        <p class="section-subtitle">धार्मिक यात्राओं से लेकर हिमालय के रोमांचक सफर तक — हम हर जगह आपके साथ हैं</p>
+
+        <div class="photo-grid">
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80" alt="Kashmir Tour Package">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>कश्मीर टूर (Kashmir Tour)</h3>
+                        <p>श्रीनगर, गुलमर्ग, पहलगाम और सोनमर्ग की खूबसूरत वादियों के लिए कंप्लीट टैक्सी पैकेज।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Kashmir%20Tour%20taxi%20ki%20jankari%20chahiye." class="card-link" target="_blank">पैकेज बुक करें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80" alt="Leh Ladakh Taxi Tour">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>लेह-लद्दाख टूर (Leh-Ladakh)</h3>
+                        <p>पैंगोंग झील, नुब्रा वैली और खारदुंग ला के लिए अनुभवी ड्राइवर्स के साथ सुरक्षित SUV टैक्सी।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Leh%20Ladakh%20Tour%20ki%20jankari%20chahiye." class="card-link" target="_blank">पैकेज बुक करें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80" alt="Chardham Yatra Taxi">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>चारधाम यात्रा (Chardham Yatra)</h3>
+                        <p>यमुनोत्री, गंगोत्री, केदारनाथ और बद्रीनाथ धाम की पवित्र यात्रा के लिए विशेष फैमिली कैब सेवा।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Chardham%20Yatra%20taxi%20ki%20jankari%20chahiye." class="card-link" target="_blank">पैकेज बुक करें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80" alt="Amarnath Yatra Taxi">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>अमरनाथ यात्रा (Amarnath Yatra)</h3>
+                        <p>जम्मू / कटरा से बालटाल और पहलगाम बेस कैंप तक आने-जाने के लिए भरोसेमंद टैक्सी सर्विस।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Amarnath%20Yatra%20taxi%20ki%20jankari%20chahiye." class="card-link" target="_blank">पैकेज बुक करें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=800&q=80" alt="Vaishno Devi Helicopter Service">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>वैष्णो देवी हेलीकॉप्टर व यात्रा</h3>
+                        <p>माता वैष्णो देवी दर्शन के लिए हेलीकॉप्टर बुकिंग सहायता, कटरा होटल पिकअप व शिवखोड़ी टूर।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Vaishno%20Devi%20Helicopter%20aur%20taxi%20ki%20jankari%20chahiye." class="card-link" target="_blank">जानकारी लें →</a>
+                </div>
+            </div>
+
+            <div class="photo-card">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Ladakh Bike Tour">
+                <div class="photo-card-body">
+                    <div>
+                        <h3>लद्दाख बाइक टूर (Ladakh Bike Tour)</h3>
+                        <p>रॉयल एनफील्ड रेंटल बाइक्स, बैकअप व्हीकल और गाइड के साथ लेह-लद्दाख एडवेंचर टूर।</p>
+                    </div>
+                    <a href="https://wa.me/919469073437?text=Hello,%20mujhe%20Ladakh%20Bike%20Tour%20ki%20jankari%20chahiye." class="card-link" target="_blank">बाइक टूर बुक करें →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="card">
+                <div class="card-icon">✈️</div>
+                <h3>एयरपोर्ट पिकअप व ड्रॉप</h3>
+                <p><strong>जम्मू, श्रीनगर और लेह एयरपोर्ट</strong> व रेलवे स्टेशन से 24x7 ऑन-टाइम पिकअप और ड्रॉप।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌲</div>
+                <h3>हिमाचल टूर पैकेज</h3>
+                <p>मनाली, शिमला, धर्मशाला, डलहौजी और स्पीति वैली के लिए आरामदायक कैब सर्विस।</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛕</div>
+                <h3>पिलग्रिमेज स्पेशल</h3>
+                <p>वैष्णो देवी, शिवखोड़ी, अमरनाथ और चारधाम यात्रा के लिए वरिष्ठ नागरिकों हेतु विशेष सुविधा।</p>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="box routes-list">
+                <h2>लोकप्रिय रूट्स और सेवाएं</h2>
+                <ul>
+                    <li>✈️ <strong>Airport Transfers:</strong> Jammu, Srinagar & Leh Airport Pickup / Drop</li>
+                    <li>🛕 <strong>Pilgrimage Tours:</strong> Vaishno Devi Helicopter, Shiv Khori, Amarnath & Chardham</li>
+                    <li>🏔️ <strong>Leh-Ladakh & Kashmir:</strong> Srinagar, Gulmarg, Pahalgam, Leh, Nubra & Pangong</li>
+                    <li>🌲 <strong>Himachal Packages:</strong> Dalhousie, Dharamshala, Manali & Shimla</li>
+                    <li>🏍️ <strong>Adventure:</strong> Leh-Ladakh Guided Bike Tour Packages</li>
+                    <li>🚕 <strong>Local Sightseeing:</strong> Katra to Patnitop, Nathatop & Nau Devi Darshan</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>तुरंत रेट पूछें (Quick Booking)</h2>
+                <form onsubmit="sendToWhatsApp(event)">
+                    <div class="form-group">
+                        <label>आपका नाम (Name)</label>
+                        <input type="text" id="custName" placeholder="अपना नाम लिखें" required>
+                    </div>
+                    <div class="form-group">
+                        <label>यात्रा का विवरण (Route / Tour)</label>
+                        <input type="text" id="custRoute" placeholder="जैसे: Jammu Airport to Katra / Amarnath / Ladakh" required>
+                    </div>
+                    <div class="form-group">
+                        <label>गाड़ी या सेवा चुनें (Select Service)</label>
+                        <select id="custCar">
+                            <option value="Sedan (Dzire / Etios)">Sedan (Dzire / Etios)</option>
+                            <option value="SUV (Innova / Crysta / Scorpio)">SUV (Innova / Crysta / Scorpio)</option>
+                            <option value="Tempo Traveller">Tempo Traveller</option>
+                            <option value="Ladakh Bike Tour">Ladakh Bike Tour</option>
+                            <option value="Vaishno Devi Helicopter + Taxi">Vaishno Devi Helicopter + Taxi</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>यात्रा की तारीख (Travel Date)</label>
+                        <input type="date" id="custDate" required>
+                    </div>
+                    <button type="submit" class="btn-submit">WhatsApp पर रेट और डिटेल पाएं</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="box contact-info">
+            <h2>संपर्क और ऑफिस पता (Contact Us)</h2>
+            <p><strong>📍 ऑफिस पता:</strong> Shop No. 22, Jammu Rd, opp. Rawalpindi Dharamshalla, Katra, Jammu and Kashmir 182301</p>
+            <p><strong>📞 मोबाइल और WhatsApp:</strong> <a href="tel:+919469073437" style="color:#007bff; text-decoration:none; font-weight:bold;">+91 9469073437</a></p>
+            <p><strong>🕒 सेवा समय:</strong> 24 घंटे उपलब्ध (24x7 Service Available)</p>
+        </div>
+    </div>
+
+    <footer>
+        <p style="font-size: 1.3rem; font-weight: bold; color: #ffcc00;">KATRA TAXI SERVICE</p>
+        <p>Shop No. 22, Jammu Rd, opp. Rawalpindi Dharamshalla, Katra, Jammu and Kashmir 182301</p>
+        <p>Call / WhatsApp: +91 9469073437</p>
+        <p style="font-size: 0.85rem; color: #94a3b8; margin-top: 12px;">© 2026 Katra Taxi Service. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/919469073437?text=Hello%20Katra%20Taxi%20Service,%20mujhe%20booking%20ki%20jankari%20chahiye." class="floating-wa" target="_blank">💬 WhatsApp करें</a>
+
+    <script>
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            var name = document.getElementById("custName").value;
+            var route = document.getElementById("custRoute").value;
+            var car = document.getElementById("custCar").value;
+            var date = document.getElementById("custDate").value;
+
+            var message = "Hello Katra Taxi Service,%0A"
+                        + "*Name:* " + name + "%0A"
+                        + "*Route/Tour:* " + route + "%0A"
+                        + "*Service/Vehicle:* " + car + "%0A"
+                        + "*Date:* " + date;
+
+            window.open("https://wa.me/919469073437?text=" + message, "_blank");
+        }
+    </script>
+
+</body>
+</html>
