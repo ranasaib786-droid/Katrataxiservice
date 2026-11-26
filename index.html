@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Katra Taxi Service for Katra, Jammu, Kashmir, Leh-Ladakh, Himachal, Chardham and Amarnath Yatra.">
+<title>Katra Taxi Service | Taxi, Tours & Travel</title>
+<style>
+:root{--navy:#071b31;--blue:#0868d5;--gold:#ffc928;--green:#0c9b48;--ink:#142235;--muted:#5b6878;--line:#e2e8f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f7fb;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+a{text-decoration:none;color:inherit}.top{background:#061426;color:#fff;padding:8px 4%;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+.top strong{color:var(--gold)}nav{background:#071b31;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:13px 4%;gap:16px;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px #0002}
+.brand{font-size:22px;font-weight:900;line-height:1;color:#fff}.brand span{color:var(--gold)}.brand small{display:block;font-size:10px;letter-spacing:2px;color:#f5ca35;margin-top:5px}
+.navlinks{display:flex;gap:22px;font-size:13px;font-weight:bold}.navlinks a:hover{color:var(--gold)}.pill{display:inline-block;padding:11px 17px;border-radius:24px;font-weight:bold;font-size:14px}.gold{background:var(--gold);color:#142235}.green{background:var(--green);color:#fff}.blue{background:var(--blue);color:#fff}
+.hero{min-height:410px;padding:55px 5%;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#03172ddd 0%,#03172d9c 48%,#03172d18 100%),url('https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-inner{max-width:720px}.hero h1{font-size:clamp(38px,5.4vw,66px);line-height:1.04;margin:13px 0}.hero h1 span{color:var(--gold)}.hero p{font-size:18px;max-width:640px}.kicker{font-size:12px;letter-spacing:2px;color:var(--gold);font-weight:900}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.features{display:grid;grid-template-columns:repeat(4,1fr);background:#071b31;color:white;border-bottom:4px solid var(--gold)}.features div{text-align:center;padding:15px 8px;border-right:1px solid #ffffff25;font-weight:bold;font-size:13px}.features b{display:block;color:var(--gold);font-size:20px}
+section{max-width:1200px;margin:48px auto;padding:0 20px}.heading{text-align:center;margin-bottom:25px}.heading small{color:#a87900;font-weight:900;letter-spacing:2px}.heading h2{margin:5px 0;font-size:30px;color:#0b2038}.heading p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 5px 18px #071b3110}.card img{width:100%;height:190px;object-fit:cover;display:block}.cardbody{padding:16px}.card h3{margin:0 0 6px;color:#0b2038;font-size:19px}.card p{margin:0 0 13px;color:#566477;font-size:14px}.card .pill{font-size:13px;width:100%;text-align:center}.tag{display:inline-block;background:#fff2bf;color:#755500;font-size:12px;font-weight:bold;padding:4px 9px;border-radius:20px;margin-bottom:8px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{background:white;border:1px solid var(--line);border-radius:10px;text-align:center;padding:20px 12px}.service strong{font-size:28px}.service h3{margin:6px 0;color:#0b2038;font-size:16px}.service p{margin:0;color:var(--muted);font-size:13px}
+.columns{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px}.panel{background:#fff;border:1px solid var(--line);border-radius:11px;padding:20px;box-shadow:0 4px 16px #071b310c}.panel h2{font-size:20px;color:#0b2038;border-bottom:3px solid var(--gold);padding-bottom:10px;margin:0 0 12px}.routes{list-style:none;margin:0;padding:0}.routes li{padding:8px 0;border-bottom:1px solid #edf0f4;font-size:13px}.routes li:before{content:"✓";color:#b18400;font-weight:bold;margin-right:8px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:4px}.field.full,form button{grid-column:1/-1}label{font-size:12px;font-weight:bold;color:#29384a}input,select,textarea{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:6px;font:inherit;font-size:13px;background:#fff}button{border:0;cursor:pointer;font:inherit}.submit{padding:12px;border-radius:7px;font-weight:bold;font-size:14px}
+.contact p{font-size:13px;color:#536174;margin:0 0 13px}.contact b{display:block;color:#142235}.contact a:not(.pill){color:#075fc7;font-weight:bold}
+footer{margin-top:55px;background:#071b31;color:#dce5ef}.foot{max-width:1200px;margin:auto;padding:32px 20px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:25px}.foot h3{color:var(--gold);margin:0 0 10px}.foot p,.foot li{font-size:13px;color:#c4d0de}.foot ul{list-style:none;padding:0;margin:0}.foot li{margin:6px 0}.copyright{text-align:center;background:#041120;padding:12px;font-size:12px;color:#aebdce}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;box-shadow:0 5px 20px #0003}
+@media(max-width:900px){.navlinks{display:none}.columns{grid-template-columns:1fr 1fr}.contact{grid-column:1/-1}.services{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.top{justify-content:center;text-align:center}nav{padding:12px 4%}.brand{font-size:17px}.hero{min-height:430px;padding:42px 6%;background-position:58% center}.hero p{font-size:16px}.features{grid-template-columns:1fr 1fr}.features div{font-size:12px}.grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.columns{grid-template-columns:1fr}.contact{grid-column:auto}.foot{grid-template-columns:1fr}form{grid-template-columns:1fr}.field.full,form button{grid-column:auto}.heading h2{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="top"><span>📍 <strong>Katra, Jammu & Kashmir</strong></span><span>24/7 Taxi & Tour Assistance</span><span>Call / WhatsApp: <strong>+91 94690 73437</strong></span></div>
+<nav><a class="brand" href="#home">KATRA <span>TAXI SERVICE</span><small>TOURS · TAXI · PILGRIMAGE</small></a><div class="navlinks"><a href="#home">Home</a><a href="#fleet">Our Fleet</a><a href="#tours">Tour Packages</a><a href="#services">Services</a><a href="#contact">Contact</a></div><a class="pill gold" href="tel:+919469073437">☎ +91 9469073437</a></nav>
+<header class="hero" id="home"><div class="hero-inner"><div class="kicker">YOUR HIMALAYAN TRAVEL PARTNER</div><h1>KATRA <span>TAXI SERVICE</span></h1><p>Your trusted travel partner for Katra, Jammu, Kashmir, Leh-Ladakh, Himachal, Chardham and Amarnath Yatra.</p><div class="actions"><a class="pill green" href="https://wa.me/919469073437" target="_blank">☏ Book on WhatsApp</a><a class="pill blue" href="tel:+919469073437">☎ Call: +91 9469073437</a></div></div></header>
+<div class="features"><div><b>🚕 24×7</b>Taxi Service</div><div><b>✓</b>Safe & Experienced Drivers</div><div><b>🏔</b>Himalayan Tour Experts</div><div><b>★</b>Best Price Assistance</div></div>
+<section id="fleet"><div class="heading"><small>TRAVEL IN COMFORT & SAFETY</small><h2>Our Fleet</h2><p>Well-maintained, clean and comfortable vehicles for every kind of journey.</p></div><div class="grid">
+<article class="card"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=85" alt="Sedan taxi"><div class="cardbody"><span class="tag">4 Seater · AC</span><h3>Sedan (Dzire / Etios)</h3><p>Economical and comfortable for couples, small families and transfers.</p><a class="pill gold" href="https://wa.me/919469073437?text=Please%20share%20Sedan%20taxi%20rates" target="_blank">Book / Check Rates →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=85" alt="SUV taxi"><div class="cardbody"><span class="tag">6–7 Seater · AC</span><h3>SUV (Innova Crysta / Scorpio)</h3><p>Spacious vehicles for hill tours, family holidays and long journeys.</p><a class="pill gold" href="https://wa.me/919469073437?text=Please%20share%20SUV%20taxi%20rates" target="_blank">Book / Check Rates →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=85" alt="Tempo Traveller"><div class="cardbody"><span class="tag">12–17 Seater</span><h3>Tempo Traveller</h3><p>Group transport for families, pilgrimage groups and sightseeing.</p><a class="pill gold" href="https://wa.me/919469073437?text=Please%20share%20Tempo%20Traveller%20rates" target="_blank">Book / Check Rates →</a></div></article>
+</div></section>
+<section id="tours"><div class="heading"><small>EXPLORE THE HIMALAYAS</small><h2>Top Destinations & Tour Packages</h2><p>From holy pilgrimages to breathtaking mountain adventures.</p></div><div class="grid">
+<article class="card"><img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=85" alt="Kashmir valley"><div class="cardbody"><h3>Kashmir Tour</h3><p>Srinagar, Gulmarg, Pahalgam & Sonamarg.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Kashmir%20tour%20details" target="_blank">Book Package →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=900&q=85" alt="Ladakh mountains"><div class="cardbody"><h3>Leh-Ladakh Tour</h3><p>Pangong Lake, Nubra Valley & Khardung La.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Leh%20Ladakh%20tour%20details" target="_blank">Book Package →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=85" alt="Himalayan temple"><div class="cardbody"><h3>Chardham Yatra</h3><p>Yamunotri, Gangotri, Kedarnath & Badrinath.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Chardham%20Yatra%20details" target="_blank">Book Package →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=900&q=85" alt="Pilgrimage cave"><div class="cardbody"><h3>Amarnath Yatra</h3><p>Jammu / Katra to Baltal and Pahalgam base camps.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Amarnath%20Yatra%20transport%20details" target="_blank">Book Package →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&w=900&q=85" alt="Mountain travel"><div class="cardbody"><h3>Vaishno Devi Yatra</h3><p>Helicopter-package assistance, Katra pickup and Shivkhori tours.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Vaishno%20Devi%20travel%20details" target="_blank">Enquire Now →</a></div></article>
+<article class="card"><img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=900&q=85" alt="Motorcycle tour"><div class="cardbody"><h3>Ladakh Bike Tour</h3><p>Ask about Royal Enfield rentals, guided rides and support vehicles.</p><a class="pill gold" href="https://wa.me/919469073437?text=I%20want%20Ladakh%20bike%20tour%20details" target="_blank">Enquire Now →</a></div></article>
+</div></section>
+<section id="services"><div class="heading"><small>TRAVEL MADE EASY</small><h2>Our Services</h2><p>Transport and trip assistance for individuals, families and groups.</p></div><div class="services"><div class="service"><strong>✈️</strong><h3>Airport Transfers</h3><p>Jammu, Srinagar and Leh airport pickup and drop.</p></div><div class="service"><strong>🏔️</strong><h3>Himachal Tours</h3><p>Manali, Shimla, Dharamshala, Dalhousie and Spiti.</p></div><div class="service"><strong>🛕</strong><h3>Pilgrimage Special</h3><p>Vaishno Devi, Shivkhori, Amarnath and Chardham.</p></div><div class="service"><strong>👨‍👩‍👧‍👦</strong><h3>Group & Custom Tours</h3><p>Family, group and corporate travel solutions.</p></div></div></section>
+<section id="contact"><div class="columns">
+<div class="panel"><h2>Popular Routes & Services</h2><ul class="routes"><li>Airport Transfers: Jammu, Srinagar & Leh</li><li>Pilgrimage: Vaishno Devi, Shivkhori, Amarnath & Chardham</li><li>Kashmir: Srinagar, Gulmarg, Pahalgam & Sonamarg</li><li>Ladakh: Leh, Nubra Valley & Pangong</li><li>Himachal: Manali, Shimla, Dharamshala & Dalhousie</li><li>Local: Katra, Patnitop, Nathatop & Nau Devi</li></ul></div>
+<div class="panel"><h2>Quick Booking / Enquiry</h2>
+<form id="enquiryForm" action="https://formsubmit.co/wotsonvetnam@gmail.com" method="POST" target="email_result">
+<input type="hidden" name="_subject" value="New Website Enquiry - Katra Taxi Service">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_autoresponse" value="Thank you for contacting Katra Taxi Service. We have received your enquiry and will contact you shortly.">
+<input type="hidden" name="WhatsApp Contact" value="+91 94690 73437">
+<div class="field"><label for="customerName">Your Name *</label><input id="customerName" name="Customer Name" required placeholder="Enter your name"></div>
+<div class="field"><label for="customerPhone">Mobile Number *</label><input id="customerPhone" name="Mobile Number" type="tel" required placeholder="Enter mobile number"></div>
+<div class="field full"><label for="customerRoute">Route / Tour Details *</label><input id="customerRoute" name="Route / Tour" required placeholder="e.g. Jammu Airport to Katra / Kashmir Tour"></div>
+<div class="field"><label for="customerVehicle">Select Service / Vehicle</label><select id="customerVehicle" name="Service / Vehicle"><option>Sedan (Dzire / Etios)</option><option>SUV (Innova / Crysta / Scorpio)</option><option>Tempo Traveller</option><option>Kashmir Tour</option><option>Leh-Ladakh Tour</option><option>Chardham / Amarnath Yatra</option><option>Vaishno Devi Yatra</option><option>Ladakh Bike Tour</option></select></div>
+<div class="field"><label for="customerDate">Travel Date</label><input id="customerDate" name="Travel Date" type="date"></div>
+<div class="field full"><label for="customerMessage">Additional Requirements</label><textarea id="customerMessage" name="Additional Requirements" rows="2" placeholder="Number of travellers, pickup time, luggage, etc."></textarea></div>
+<button class="submit green" type="submit">Send Enquiry on WhatsApp & Email →</button>
+</form>
+<iframe name="email_result" title="Email submission response" style="display:none"></iframe>
+<p style="font-size:11px;color:#64748b;margin:10px 0 0">Your enquiry will be sent to our email and WhatsApp. First-time email activation may be required.</p>
+</div>
+<div class="panel contact"><h2>Contact Us</h2><p><b>Office Address</b>Shop No. 22, Jammu Road, Opp. Rawalpindi Dharamshalla, Katra, Jammu and Kashmir 182301, India.</p><p><b>Call / WhatsApp</b><a href="tel:+919469073437">+91 94690 73437</a></p><p><b>Email</b><a href="mailto:wotsonvetnam@gmail.com">wotsonvetnam@gmail.com</a></p><p><b>Service Hours</b>24×7 — All Days</p><a class="pill gold" href="https://wa.me/919469073437" target="_blank">Chat with Our Team</a></div>
+</div></section>
+<footer><div class="foot"><div><h3>KATRA TAXI SERVICE</h3><p>Your trusted travel partner for Katra, Jammu, Kashmir, Leh-Ladakh, Himachal, Chardham and Amarnath Yatra.</p></div><div><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#fleet">Our Fleet</a></li><li><a href="#tours">Tour Packages</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul></div><div><h3>Contact</h3><p>Shop No. 22, Jammu Road, Opp. Rawalpindi Dharamshalla, Katra 182301, Jammu and Kashmir, India.</p><p>+91 94690 73437</p><p>wotsonvetnam@gmail.com</p></div></div><div class="copyright">© 2026 Katra Taxi Service. All Rights Reserved.</div></footer>
+<a class="pill green float" href="https://wa.me/919469073437?text=Hello%20Katra%20Taxi%20Service%2C%20I%20need%20travel%20assistance." target="_blank">WhatsApp</a>
+<script>
+document.getElementById('enquiryForm').addEventListener('submit',function(e){
+  const f=this;
+  const name=f.elements['Customer Name'].value.trim();
+  const phone=f.elements['Mobile Number'].value.trim();
+  const route=f.elements['Route / Tour'].value.trim();
+  const service=f.elements['Service / Vehicle'].value;
+  const date=f.elements['Travel Date'].value || 'Not specified';
+  const extra=f.elements['Additional Requirements'].value.trim() || 'None';
+  const message='Hello Katra Taxi Service, I have submitted a website enquiry.%0A%0A'
+    +'Name: '+encodeURIComponent(name)+'%0A'
+    +'Mobile: '+encodeURIComponent(phone)+'%0A'
+    +'Route / Tour: '+encodeURIComponent(route)+'%0A'
+    +'Service / Vehicle: '+encodeURIComponent(service)+'%0A'
+    +'Travel Date: '+encodeURIComponent(date)+'%0A'
+    +'Additional Requirements: '+encodeURIComponent(extra);
+  window.open('https://wa.me/919469073437?text='+message,'_blank');
+});
+</script>
+</body>
+</html>
